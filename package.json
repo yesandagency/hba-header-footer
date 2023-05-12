@@ -1,17 +1,5 @@
 {
-  "name": "ppl",
-  "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "gulp": "^4.0.2"
-  },
   "devDependencies": {
-    "gulp-purgecss": "^5.0.0"
+    "purify-css": "^1.2.5"
   }
 }
