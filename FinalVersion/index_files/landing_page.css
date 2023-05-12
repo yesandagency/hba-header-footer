@@ -1,0 +1,24 @@
+#ui-datepicker-div { z-index:1999 !important; }
+
+.recaptcha-error {
+	border-color: #dd4b39 !important;
+}
+
+p
+{
+	margin:unset;
+}
+.form_designer_field_editable {
+    display: inline-block;
+    width: 100%;
+}
+
+.ohnohoney {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    z-index: -1;
+}

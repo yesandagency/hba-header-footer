@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml" class="wf-roboto-n4-active wf-opensans-n4-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="./css" media="all">
+</head><body><div style="display:none" id="SaveAsTemplateLandingPageDialog" title="Save As Template">
+    <div style="margin:10px 0px 10px 0px;">
+        <div class="z_input_label requiredField" style="margin-left: -5px;margin-right: -11px;display: inline;">
+            <span>Template Name:</span> <img src="./icon_required.png">
+        </div>
+        <input id="newName_template" type="text" class="z_input_box" maxlength="50" style="width:259px" autocomplete="off">
+        <span id="templNameCharRemaining" style="padding-left: 152px;">Characters remaining: <span id="tamplNameRemaining"></span></span><br><br>
+        <div class="z_input_label" style="margin-left: -5px;margin-right: -11px;width:150px;vertical-align:top;">
+			<span>Template Description:</span> <img src="./icon_required.png">
+        </div>
+        <textarea id="newDescription_template" type="text" maxlength="100" class="z_input_box" style="width:259px;height: 65px;max-width:270px;max-height: 65px;resize: none;"></textarea>
+        <span id="templDescriptionCharRemaining" style="padding-left: 152px;">Characters remaining: <span id="tamplDescriptionRemaining"></span></span>
+		<div id="saveAsTemplateWarning" style="margin-top:10px"></div>
+        <input id="oldId_template" type="hidden" autocomplete="off">
+    </div>
+</div>
+<div style="display:none" id="CopyLandingPageDialog" title="Copy Landing Page">
+    <div style="margin:10px 0px 10px 0px;">
+        <div class="z_input_label" style="width:90px;padding:5px;">
+            Name:
+        </div>
+        <input id="newName_copy" type="text" class="z_input_box" maxlength="100" style="width:300px" autocomplete="off"><br><br>
+        <div class="z_input_label" style="width:90px;padding:5px;">
+            Filename:
+        </div>
+        <input id="newFileName_copy" type="text" maxlength="200" class="z_input_box" style="width:300px" autocomplete="off">
+        <input id="oldId_copy" type="hidden" autocomplete="off">
+    </div>
+</div>
+<div style="display:none" id="foldersDialog" title="Folders">
+    <table id="foldersTable"></table>
+    <div id="foldersPager"></div>
+</div>
+<div style="display:none;width:600px;" id="MoveToFolderDialog" title="Move Landing Page">
+    Select the destination folder:<br>
+    <select id="folderMove"><option>Select a folder</option></select>
+</div>
+
+<div id="contextMenuMain" style="display:none;margin:0px;padding:0px;">
+    <ul class="contextMenuz">
+        <li id="Report" class="report"><a href="https://hba.informz.net/HBA/pages/Copy_of_Digital_Strategy___Test#Report">Report</a></li>
+        <li id="Edit" class="edit"><a href="https://hba.informz.net/HBA/pages/Copy_of_Digital_Strategy___Test#Edit">Edit</a></li>
+        <li id="Test" class="envelope"><a href="https://hba.informz.net/HBA/pages/Copy_of_Digital_Strategy___Test#Test">Test</a> </li>
+        <li id="Activate" class="live"><a href="https://hba.informz.net/HBA/pages/Copy_of_Digital_Strategy___Test#Activate">Activate</a></li>
+        <li id="Deactivate" class="wizard"><a href="https://hba.informz.net/HBA/pages/Copy_of_Digital_Strategy___Test#Deactivate">Deactivate</a></li>
+        <li id="SaveAsTemplate" class="properties"><a href="https://hba.informz.net/HBA/pages/Copy_of_Digital_Strategy___Test#SaveAsTemplate">Save As Template</a></li>
+        <li id="Copy" class="copy"><a href="https://hba.informz.net/HBA/pages/Copy_of_Digital_Strategy___Test#Copy">Copy</a></li>
+        <li id="Delete" class="delete"><a href="https://hba.informz.net/HBA/pages/Copy_of_Digital_Strategy___Test#Delete">Delete</a></li>
+        <li id="Undelete" class="undelete"><a href="https://hba.informz.net/HBA/pages/Copy_of_Digital_Strategy___Test#Undelete">Undelete</a></li>
+        <li id="Archive" class="archive"><a href="https://hba.informz.net/HBA/pages/Copy_of_Digital_Strategy___Test#Archive">Archive</a></li>
+        <li id="InProgress" class="gearIn"> <a href="https://hba.informz.net/HBA/pages/Copy_of_Digital_Strategy___Test#inProgress">Set as In Progress</a> </li>
+    </ul>
+</div>
+ 
+<div id="designer_subscriber_popup" style="display:none" class="quick_message">
+    <table id="designer_grid"></table><div id="designer_grid_pager"></div>
+</div>
+
+<div style="display:none;" id="landingPageGallery" title="Choose a Landing Page Design">
+	<div id="FormsSelectorTabs">
+		<ul>
+			<li><a id="formsTab" href="https://hba.informz.net/HBA/pages/Copy_of_Digital_Strategy___Test#tab_forms">Form</a></li>
+			<li><a id="contentTab" href="https://hba.informz.net/HBA/pages/Copy_of_Digital_Strategy___Test#tab_content">Content Only</a></li>
+			<li><a id="unsubscribeTab" href="https://hba.informz.net/HBA/pages/Copy_of_Digital_Strategy___Test#tab_unsubscribe">Unsubscribe Form</a></li>
+            <li><a id="customTab" href="https://hba.informz.net/HBA/pages/Copy_of_Digital_Strategy___Test#tab_custom">Custom</a></li>
+		</ul>
+		<div id="tab_forms">
+			<div id="form_style_gallery_choose" class="carusele-object"></div>						
+		</div>
+		<div id="tab_content">
+			<div id="content_style_gallery_choose" class="carusele-object"></div>
+		</div>
+		<div id="tab_unsubscribe">
+			<div id="unsub_style_gallery_choose" class="carusele-object"></div>
+		</div>
+        <div id="tab_custom">
+            <div id="custom_style_gallery_choose" class="carusele-object"></div>
+        </div>
+    </div>   
+</div>
+
+<div style="display:none" id="NotificationDialog" title="Delete Landing Page">
+	<div id="notificationArea"></div>
+</div>
+<div id="empty_fields_message" style="display:none;" class="message_box">
+	<p>
+		Some non-required fields on this form are blank. Do you wish to save with blank values?
+	</p>
+</div>
+
+
+    <script src="./jquery.min.js"></script>
+    <script>window.jQuery || document.write(unescape('%3Cscript src="//cdn.informz.net/Admin31/common/jquery/jquery-latest.min.js"%3E%3C/script%3E'))</script>
+    <script src="./jquery-ui.min.js"></script>
+    <script>window.jQuery.ui || document.write(unescape('%3Cscript src="//cdn.informz.net/Admin31/common/jquery-ui/js/jquery-ui-1.9.0.custom.min.js"%3E%3C/script%3E'))</script>
+    <script type="text/javascript" src="./font.js"></script>
+    <script type="text/javascript" src="./webfont.js"></script>
+    <script type="text/javascript" src="./lodash.js"></script>
+    <link rel="stylesheet" type="text/css" href="./validationEngine.jquery.css">
+
+	
+		<script type="text/javascript" src="./jquery.validationEngine.js"></script>
+	<script type="text/javascript" src="./jquery.validationEngine-en.js"></script>
+	    <link type="text/css" rel="stylesheet" href="./jquery-ui-1.9.0.custom.min.css">
+    <link rel="stylesheet" type="text/css" href="./mediaelementplayer.min.css">
+	<link rel="stylesheet" type="text/css" href="./landing_page.css">
+	<link rel="stylesheet" type="text/css" href="./medium-editor.min.css">
+    <script type="text/javascript" src="./froogaloop.min.js"></script>
+    <script type="text/javascript" src="./mediaelement-and-player.min.js"></script>
+	<style>body { position: absolute; padding: 0; margin: 0; }#body_content { min-width:calc(100vw - 20px); min-height:calc(100vh - 20px); padding: 10px; display: block; font-family: Roboto; font-size: 16px; line-height: 24px; background-color: rgba(255,255,255,0); background-image: url();  }
+ .input_field_label_live { margin-bottom: 0px; margin-top: 0px; color: rgba(255,255,255,1); font-weight: bold; font-size: 12px; font-family: Roboto; border: 1px solid rgba(0,0,0,0); border-radius: 2px 8px 8px 2px; border-right: 8px solid rgba(0,0,0,0); padding-right: 8px; margin-right: 0px; float: left; min-width: 50px; min-height: 10px; vertical_align: middle; padding-top: 4; padding-bottom: 4; height: auto; line-height: 18px; letter-spacing: 0px;  }
+ .input_field_choice_live { display: inline-block; font-family: Roboto; font-size: 12px; font-weight: normal; color: #333333; margin-top: 2px; margin-bottom: 2px;  }
+ .radio_checkbox_header_live { display: inline-block; color: #333333; font-family: Roboto; font-weight: bold; font-size: 14px;  }
+ .msg_cat_choice_live { display: inline-block; font-family: Roboto; font-size: 12px; font-weight: normal; color: #333333; margin-top: 2px; margin-bottom: 2px;  }
+ .msg_cat_description_live { color: #333333; font-size: 12px; font-weight: normal; font-family: Roboto; line-height: 18px; letter-spacing: 0px; min-height: 18px; display: block; margin-bottom: 4px; padding-left: 10px;  }
+ .text_style_live { color: #333333 !important; line-height: 24px; letter-spacing: 0px; font-family: Roboto !important; font-weight: normal; font-size: 16px; margin-top: 0px; margin-bottom: 0px;  }
+ .text_style_live h1 { color: #666666 !important; font-family: Roboto !important; font-weight: bold; font-size: 24px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; letter-spacing: 0px;  }
+ .text_style_live h2 { color: #666666 !important; font-family: Roboto !important; font-weight: bold; font-size: 22px; margin-top: 0px; margin-bottom: 0px; line-height: 24px; letter-spacing: 0px;  }
+ .input_field_input_live { border: 0px inset rgba(0,0,0,1); margin-top: 0px; margin-bottom: 0px; border-radius: 0px; background-color: rgba(255,255,255,1); color: rgba(51,51,51,1); padding: 4px; font-family: Roboto; font-weight: normal; font-size: 15px; line-height: 24px; letter-spacing: 0px; display: inline-block;  }
+ .formErrorContent { font-family: Open Sans !important; font-size: 11px !important; font-weight: normal !important; color: #ffffff !important; padding: 5px !important; border-style: solid !important; border-width: 2px !important; border-color: #dddddd !important; background-color: #ee0101 !important; line-height: 11px !important; letter-spacing: initial !important;  }
+ .formErrorArrow div { border-left-style: solid !important; border-right-style: solid !important; border-left-width: 2px !important; border-right-width: 2px !important; border-left-color: #dddddd !important; border-right-color: #dddddd !important; background-color: #ee0101 !important; background: #ee0101 !important;  }
+ .dropdownFieldLive { color: rgba(51,51,51,1); background-color: rgba(255,255,255,1); border: 0px inset #9C9C9C; line-height: 24px; font-family: Roboto; font-weight: normal; font-size: 15px;  }
+ .listFieldLive { display: inline-block; color: undefined; background-color: rgba(255,255,255,1); font-family: Roboto; font-weight: normal; font-size: 15px; border-width: 0px; border-color: transparent;  }
+ .edit-element-live { border: 0px inset rgba(0,0,0,1); margin-top: 0px; margin-bottom: 0px; border-radius: 0px; background-color: rgba(255,255,255,1); color: rgba(51,51,51,1); padding: 4px; font-family: Roboto; font-weight: normal; font-size: 15px; line-height: 24px; letter-spacing: 0px; display: inline-block; }
+.text_style_live a:link, .text_style_live a:visited, .text_style_live a:hover, .text_style_live a:active { color: #0000ee !important; text-decoration: underline !important; font-size: inherit;  }
+ </style>
+
+    <script type="text/javascript">
+	
+	$(document).ready(function () {
+        var thisFormData = {"formElements": [{"id":"email","id_mobile":"email_mobile","x_loc":15,"y_loc":10,"x_loc_mobile":10,"y_loc_mobile":10,"width":329.4,"height":43.4,"width_mobile":329.4,"height_mobile":43.4,"text":"Enter email here","showDelete":false,"showEdit":false,"containerId":"sortableFormItems","type":"FormElementEmail","required":"yes","allowsOverlappingElements":false,"textWidth":80,"inputBoxWidth":250,"textWidth_mobile":80,"inputBoxWidth_mobile":200,"isShownOnMobile":true,"progressiveLevel":1,"webinarFieldTypeId":1},{"id":"submitButton","id_mobile":"submitButton_mobile","x_loc":15,"y_loc":50,"x_loc_mobile":10,"y_loc_mobile":53.3984375,"width":120,"height":35,"width_mobile":175,"height_mobile":35,"text":"<div style=\"\"></div><p style=\"\"></p><p style=\"\"><b>SUBSCRIBE</b></p><p style=\"\"></p>","showDelete":false,"showEdit":false,"containerId":"sortableFormItems","type":"FormElementButton","required":"no","allowsOverlappingElements":false,"textWidth":0,"inputBoxWidth":0,"textWidth_mobile":0,"inputBoxWidth_mobile":0,"isShownOnMobile":true}],"style":{"id":1,"version":2,"style":{"contentBackgroundColor":"rgba(255,255,255,0)","contentBorderWidth":"0px","contentBorderType":"solid","contentBorderColor":"#efefef","contentBorderRadius":"0px","contentMargin":"10px auto","contentPadding":"10px","workspacePadding":"10px","formBackgroundColor":"rgba(255,255,255,0)","formBackgroundImage":"/admin31/images/form/b0.jpg","formBackgroundRepeat":"no-repeat","formBackgroundSize":"cover","formBackgroundUseImage":"2","buttonUseImage":"1","buttonImage":"","unsubscribeButtonUseImage":"1","unsubscribeButtonImage":"","formWidth":"544px","formHeight":"307px","formMobileWidth":"468px","formMobileHeight":"400px","fontFamily":"Roboto","fontSize":"16px","fontWeight":"normal","fontColor":"#333333","fontLineHeight":"24px","fontLetterSpacing":"0px","fontSizeH1":"24px","fontWeightH1":"bold","fontColorH1":"#666666","fontLineHeightH1":"24px","fontLetterSpacingH1":"0px","fontSizeH2":"22px","fontWeightH2":"bold","fontColorH2":"#666666","fontLineHeightH2":"24px","fontLetterSpacingH2":"0px","fontSizePers":"12px","fontWeightPers":"bold","fontColorPers":"rgba(255,255,255,1)","hyperlinkTextDecoration":"underline","hyperlinkColor":"#0000ee","inputBorderWidth":"0px","inputBorderType":"inset","inputBorderColor":"rgba(0,0,0,1)","fontSizeInterest":"12px","fontWeightInterest":"normal","fontColorInterest":"#333333","fontLineHeightInterest":"24px;","fontLetterSpacingInterest":"0px","fontSizeInterestHeader":"14px","fontWeightInterestHeader":"bold","fontColorInterestHeader":"#333333","fontSizeMsgCatDescription":"12px","fontWeightMsgCatDescription":"normal","fontColorMsgCatDescription":"#333333","fontLineHeightMsgCatDescription":"18px","fontMarginBottomMsgCatDescription":"4px","fontLetterSpacingMsgCatDescription":"0px","buttonBorderWidth":"2px","buttonBorderType":"solid","buttonBorderColor":"rgba(249,235,59,1)","buttonBorderRadius":"0px","buttonMargin":"0px","buttonPadding":"0px","buttonBackgroundColor":"rgba(250,237,58,0)","buttonFontColor":"rgba(255,255,255,1)","buttonFontSize":"16px","buttonFontLineHeight":"35px","buttonFontLetterSpacing":"1px","fontLineHeightPers":"18px","fontLetterSpacingPers":"0px","inputFontLineHeight":"24px","inputFontLetterSpacing":"0px","buttonTextAlign":"center","buttonBoxShadow":"2px 2px 2px #999","marginPers":"0px","marginText":"0px","marginDemo":"0px","marginInterest":"2px","inputRadiusPers":"0px","inputBackgroundColorPers":"rgba(255,255,255,1)","inputPaddingPers":"4px","inputFontSizePers":"15px","inputFontWeightPers":"normal","inputFontColorPers":"rgba(51,51,51,1)","labelOption":"2","validationLocation":"Below","validationBackgroundColor":"#ee0101","validationBorderWidth":"2px","validationBorderType":"solid","validationBorderColor":"#dddddd","validationPadding":"5px","validationFontFamily":"Open Sans","fontSizeValidation":"11px","fontWeightValidation":"normal","fontColorValidation":"#ffffff","buttonImageWidth":200,"buttonImageHeight":20,"frameBorderRadius":"0px","frameBorderWidth":"0px"}},"process":{"redirect":{"type":"1","url":"http://HBA.informz.net/HBA/pages/Footer_Newsletter_Thank_You_page","landing_page":"https://HBA.informz.net/HBA/pages/Footer_Newsletter_Thank_You_page","filename":"","fileurl":""},"changeProfile":{"interests":["323318"]},"notify":{"email":[],"note":""},"followUp":{"mailingId":0,"campaignId":0,"mailingTypeId":null},"webinarId":0,"autoFill":false,"isEmailBlockDisabled":false,"disabledAutoScroll":true}};
+		// remove iMIS and remote interests fields if brand is not iMIS or bridge is down.
+		
+
+        var formTypeId = 0
+
+        var defaultFormFont = ['Roboto'];
+        var validationFormFont = thisFormData.style.style.validationFontFamily;
+        if(validationFormFont){
+            defaultFormFont.push(validationFormFont);
+        }
+		WebFont.load({ google: { families: defaultFormFont } });
+
+		UpdateFormFieldDetails();
+		ClearFields();
+
+        var validationPromptLocation = ""; //prevent error in case the validationLocation is undefined
+        validationPromptLocation = thisFormData.style.style.validationLocation;
+        switch (validationPromptLocation) {
+		    case "Above":
+		        validationPromptLocation = "topLeft";
+			    break;
+		    case "Below":
+                validationPromptLocation = "bottomLeft";
+			    break;
+		    case "Right":
+                validationPromptLocation = "centerRight";
+			    break;
+            default:
+                validationPromptLocation = "centerRight";
+	    }
+		$(".formData").validationEngine({ promptPosition: validationPromptLocation, maxErrorsPerField: 1 });
+		if (IsAutofillEnabled()) {
+			SetValuesOfFields();
+        }
+        else{
+        	CheckIfUserIsIMIS();
+        }
+
+		SetDefaultValues();
+		
+			SetFormEmailSessionValue('');
+		
+		var width = $(window).width();
+			
+					$("#submitButton_live").click(function() {SubmitFormIfValid()});
+			
+
+		$("#loadingMessage").remove();
+		$("#landing_page_content").show();
+
+		// Add the jquery date picker to elements that need it.
+		$("input[isdate='true']").each(function(index) {
+			var minYear = $(this).prop("minYear");
+			var maxYear = $(this).prop("maxYear");
+			$(this).datepicker({
+				dateFormat: "yy-mm-dd",
+				changeMonth: true,
+				changeYear: true,
+				minDate: new Date(minYear, 0, 1),
+				maxDate: new Date(maxYear, 11, 31),
+				// For some reason the validation engine is having a tough time picking up date selections and may
+				// still say "field required".
+				onSelect: function() {
+					$(this).validationEngine("validate");
+				}
+			});
+		});
+
+        //set focus on first element in form
+		if (!thisFormData.process.disabledAutoScroll) {
+            $("form:first *:input[type!=hidden]:first").focus();
+		}
+
+        // init video player
+        $('video').each(function(index, element){
+            var el = $(this)
+            var autoPlay = false;
+
+            if (el.attr('data-autoplay') === 'true') {
+                autoPlay = true;
+            }
+
+            el.mediaelementplayer({
+                features: ['playpause', 'progress', 'current', 'duration', 'tracks', 'volume', 'fullscreen'],
+                success: function(mediaElement){
+                    if (autoPlay) {
+                        mediaElement.play();
+                    }
+                }
+	});
+        });
+
+        $("#closeTextModeWarning").click(function () {
+            $("#TestPageWarning").hide();
+	});
+
+        
+            $(".unSub_Checkbox").hide();
+        
+
+
+        // We no longer want the unsub checkbox to be checked by default. I removed the option to set this in the designer
+        // There is no doubt a more elegant way to uncheck this but I did not find it right off so this crude but effective option will do.
+        $("#unSubAll_live").prop('checked', false);
+
+        $("#unSubAll_live").change(function() {
+            if(this.checked) {
+                DisableFormForUnsubscribe();
+                SetEmailAddress();
+            } else {
+                EnableFormElements(validationPromptLocation);
+            }
+        });
+
+        //if field is set to checked by default
+        if($("#unSubAll_live").is(':checked')){
+            DisableFormForUnsubscribe();
+            SetEmailAddress();
+        }
+		//Set demographic dropdown options color for 'placeholders inside the inputs' types only
+		$(".dropdownFieldLive:has(option:disabled)").css('color','gray')
+			.find('option').css('color','black');
+		$(".dropdownFieldLive:has(option:disabled)").change(function() {
+			$(this).css('color','black');
+        });
+
+		//"FormElementInterest"
+		$(thisFormData.formElements).each(function(index, object) {
+			if (object.type == "FormElementInterest" || object.type == "FormElementMsgCat"	) {
+				if (object.checkboxChecked == "yes") {
+					$("input", "#" + object.id + "_live").prop("checked", true);
+					$("input", "#" + object.id + "_live_mobile").prop("checked", true);
+				}
+			}
+		});
+
+	});
+
+    function DisableFormForUnsubscribe() {
+        $(".formData").validationEngine('detach');
+        $(".formData").validationEngine('hideAll');
+        $(".formData").find("input, textarea, button, select").prop('disabled', true);
+        $("#unSubAll_live").prop('disabled', false);
+    }
+
+    function SetEmailAddress(){
+      $("#isf_subscriber_email").val('');
+    }
+
+    function EnableFormElements(validationPromptLocation) {
+        $(".formData").validationEngine('attach', { promptPosition: validationPromptLocation, maxErrorsPerField: 1 });
+        $(".formData").find("input, textarea, button, select").prop('disabled', false);
+    }
+
+        // Fields that rely on live data may require updates
+        // (e.g., changing interest names, removing fields that don't apply to particular subscribers, etc)
+		function UpdateFormFieldDetails() {
+		
+				$(".remote-interest, .all-remote-interests").hide();
+			
+
+            $("input[name='isf_interestGroupSelect']").addClass('unverified-interest');
+
+            
+
+            // Removes any interests that no longer exist in the brand
+            $(".unverified-interest").parent("div.interest-wrap").remove();
+        }
+
+        function ClearFields() {
+            $(".formData").find("input:text, input:password, input:file, select, textarea").val("");
+            $(".formData").find("input:radio, input:checkbox").removeAttr("checked").removeAttr("selected");
+            $(".isf_checkbox_checked").prop("checked", "checked");
+            $(".form_designer_button").prop( "enabled", true );
+            $(".form_designer_button").css({"cursor":"normal"});
+        }
+
+        function SetDefaultValues() {
+		    var formIdFieldExists = $("[name='isf_form_id']").length > 0;
+		    var subscriberIdFieldExists = $("[name='isf_id']").length > 0;
+
+            var form = $('form')
+			if (!formIdFieldExists) {
+			  form.append('<input type="hidden" name="isf_form_id" />');
+			}
+			if (!subscriberIdFieldExists) {
+			  form.append('<input type="hidden" name="isf_id" />');
+			}
+
+            // If autoFill is True, then we set the value to Subscriber_id for update the subscriber (including email address) based on the supplied subscriber_id from either the Cookie or the parameter
+            if(IsAutofillEnabled()) {
+            	$("[name='isf_id']").val("0");
+                SetEmailAddress();
+            } else {
+                $("[name='isf_id']").val("0");
+        	}
+            $("[name='isf_form_id']").val("8637");
+        }
+
+		function ExtractMultiSelectIdAndValues() {
+			var idToValues = {};
+
+			
+			return idToValues;
+		}
+		function IsAutofillEnabled(){
+			var thisFormData = {"formElements": [{"id":"email","id_mobile":"email_mobile","x_loc":15,"y_loc":10,"x_loc_mobile":10,"y_loc_mobile":10,"width":329.4,"height":43.4,"width_mobile":329.4,"height_mobile":43.4,"text":"Enter email here","showDelete":false,"showEdit":false,"containerId":"sortableFormItems","type":"FormElementEmail","required":"yes","allowsOverlappingElements":false,"textWidth":80,"inputBoxWidth":250,"textWidth_mobile":80,"inputBoxWidth_mobile":200,"isShownOnMobile":true,"progressiveLevel":1,"webinarFieldTypeId":1},{"id":"submitButton","id_mobile":"submitButton_mobile","x_loc":15,"y_loc":50,"x_loc_mobile":10,"y_loc_mobile":53.3984375,"width":120,"height":35,"width_mobile":175,"height_mobile":35,"text":"<div style=\"\"></div><p style=\"\"></p><p style=\"\"><b>SUBSCRIBE</b></p><p style=\"\"></p>","showDelete":false,"showEdit":false,"containerId":"sortableFormItems","type":"FormElementButton","required":"no","allowsOverlappingElements":false,"textWidth":0,"inputBoxWidth":0,"textWidth_mobile":0,"inputBoxWidth_mobile":0,"isShownOnMobile":true}],"style":{"id":1,"version":2,"style":{"contentBackgroundColor":"rgba(255,255,255,0)","contentBorderWidth":"0px","contentBorderType":"solid","contentBorderColor":"#efefef","contentBorderRadius":"0px","contentMargin":"10px auto","contentPadding":"10px","workspacePadding":"10px","formBackgroundColor":"rgba(255,255,255,0)","formBackgroundImage":"/admin31/images/form/b0.jpg","formBackgroundRepeat":"no-repeat","formBackgroundSize":"cover","formBackgroundUseImage":"2","buttonUseImage":"1","buttonImage":"","unsubscribeButtonUseImage":"1","unsubscribeButtonImage":"","formWidth":"544px","formHeight":"307px","formMobileWidth":"468px","formMobileHeight":"400px","fontFamily":"Roboto","fontSize":"16px","fontWeight":"normal","fontColor":"#333333","fontLineHeight":"24px","fontLetterSpacing":"0px","fontSizeH1":"24px","fontWeightH1":"bold","fontColorH1":"#666666","fontLineHeightH1":"24px","fontLetterSpacingH1":"0px","fontSizeH2":"22px","fontWeightH2":"bold","fontColorH2":"#666666","fontLineHeightH2":"24px","fontLetterSpacingH2":"0px","fontSizePers":"12px","fontWeightPers":"bold","fontColorPers":"rgba(255,255,255,1)","hyperlinkTextDecoration":"underline","hyperlinkColor":"#0000ee","inputBorderWidth":"0px","inputBorderType":"inset","inputBorderColor":"rgba(0,0,0,1)","fontSizeInterest":"12px","fontWeightInterest":"normal","fontColorInterest":"#333333","fontLineHeightInterest":"24px;","fontLetterSpacingInterest":"0px","fontSizeInterestHeader":"14px","fontWeightInterestHeader":"bold","fontColorInterestHeader":"#333333","fontSizeMsgCatDescription":"12px","fontWeightMsgCatDescription":"normal","fontColorMsgCatDescription":"#333333","fontLineHeightMsgCatDescription":"18px","fontMarginBottomMsgCatDescription":"4px","fontLetterSpacingMsgCatDescription":"0px","buttonBorderWidth":"2px","buttonBorderType":"solid","buttonBorderColor":"rgba(249,235,59,1)","buttonBorderRadius":"0px","buttonMargin":"0px","buttonPadding":"0px","buttonBackgroundColor":"rgba(250,237,58,0)","buttonFontColor":"rgba(255,255,255,1)","buttonFontSize":"16px","buttonFontLineHeight":"35px","buttonFontLetterSpacing":"1px","fontLineHeightPers":"18px","fontLetterSpacingPers":"0px","inputFontLineHeight":"24px","inputFontLetterSpacing":"0px","buttonTextAlign":"center","buttonBoxShadow":"2px 2px 2px #999","marginPers":"0px","marginText":"0px","marginDemo":"0px","marginInterest":"2px","inputRadiusPers":"0px","inputBackgroundColorPers":"rgba(255,255,255,1)","inputPaddingPers":"4px","inputFontSizePers":"15px","inputFontWeightPers":"normal","inputFontColorPers":"rgba(51,51,51,1)","labelOption":"2","validationLocation":"Below","validationBackgroundColor":"#ee0101","validationBorderWidth":"2px","validationBorderType":"solid","validationBorderColor":"#dddddd","validationPadding":"5px","validationFontFamily":"Open Sans","fontSizeValidation":"11px","fontWeightValidation":"normal","fontColorValidation":"#ffffff","buttonImageWidth":200,"buttonImageHeight":20,"frameBorderRadius":"0px","frameBorderWidth":"0px"}},"process":{"redirect":{"type":"1","url":"http://HBA.informz.net/HBA/pages/Footer_Newsletter_Thank_You_page","landing_page":"https://HBA.informz.net/HBA/pages/Footer_Newsletter_Thank_You_page","filename":"","fileurl":""},"changeProfile":{"interests":["323318"]},"notify":{"email":[],"note":""},"followUp":{"mailingId":0,"campaignId":0,"mailingTypeId":null},"webinarId":0,"autoFill":false,"isEmailBlockDisabled":false,"disabledAutoScroll":true}};
+			var formTypeId = 0
+
+			// autofill is used only in profile form type (landingPageObj.formTypeId=0), for other types of forms autofill is not needed
+			return thisFormData.process.autoFill || formTypeId != 0;
+		}
+
+		function IsAnyPersonalFieldEmpty(){
+			if(!IsAutofillEnabled()){
+				var fields = $('input[id^="isf_p_"]');
+				for(var i = 0; i < fields.length; i++){
+					if(fields[i].value.trim() == ''){
+						return true;
+					}
+				}
+			}
+			return false;
+		}
+
+		function SetIMISFields(data){
+			if(data){
+				for(var i = 0; i < data.length; i++){
+					var selector = "[id='imis_\\(imis\\)_"+data[i].name+"']";
+					if($(selector))
+						$(selector).val(data[i].value);
+				}
+			}
+		};
+
+		function CheckIfUserIsIMIS(){
+			
+		}
+
+		function ChangeIMISFields(action){
+			var items = $('input[id^="imis_"]').parent().parent();
+			ChangeItemsByAction(items, action);
+			}
+
+		function ChangeRemoteInterestsFields(action){
+			var items = $('.remote-interest').parent().parent();
+			ChangeItemsByAction(items, action);
+		}
+
+		function ChangeItemsByAction(items, action){
+				switch(action){
+					case "hide": items.hide(); break;
+					case "show": items.show(); break;
+					case "remove": items.remove(); break;
+				}
+			}
+
+		function LoadIMISFieldsData() {
+			
+		}
+
+		function GetIMISObject(){
+			var items =  $('input[id^="imis_"]');
+			var imisObj = [];
+			if(items.length > 0){
+				for(var i = 0; i < items.length; i++){
+					imisObj.push({ name: items[i].title, value:  items[i].value })
+				}
+			}
+			return imisObj;
+		}
+
+		function SetValuesOfFields() {
+			var multiSelectOptions = ExtractMultiSelectIdAndValues();
+			var msgCatOptOuts = [];
+			LoadIMISFieldsData();
+			for (var id in multiSelectOptions) {
+				$(`#${id}`).val(multiSelectOptions[id]);
+			}
+			// Ensure all boxes are checked
+			document.getElementsByName("isf_MsgCatSelect").forEach(checkbox => {
+				checkbox.checked = true;
+			});
+			// I tried just setting the property `checked = false`, but something, somewhere, changes it back
+			// I banged my head against a wall for quite a while until giving up
+			// This is the easy bandaid, and while it has visual problems, it works
+			window.addEventListener('load', (event) => {
+				// uncheck opted out boxes
+				msgCatOptOuts.forEach(id => {
+					var elem = document.getElementById(`msgCat_input_${id}`)
+					
+					if (elem) {
+						elem.checked = false;
+					}
+				});
+			});
+		
+			var isTextFormat = false;
+			if (isTextFormat) {
+				$("[name='isf_format']").prop("checked", "checked");
+        }
+        }
+		var FORM_SUBMIT_URL = "https://HBA.informz.net/HBA/form_process.asp?_v=1&_zs=&_zmi="; // renders absolute url address, including protocol
+
+		
+		//FORM_SUBMIT_URL = FORM_SUBMIT_URL.replace("http:", "https:"); // ensure form will be submitted via HTTPS protocol
+
+		var currentProtocol = window.location.protocol;
+		if(currentProtocol.indexOf("https:") > -1) {
+			FORM_SUBMIT_URL = FORM_SUBMIT_URL.replace("http:", "https:");
+		} else {
+			FORM_SUBMIT_URL = FORM_SUBMIT_URL.replace("https:", "http:");
+		}
+		function SubmitFormIfValid() {
+			if($("#unSubAll_live").is(':checked')) {
+				
+					UnsubscribeFromForm();
+				
+				return;
+			}
+
+			if (! $(".formData").validationEngine("validate")) {
+				return;
+			}
+			
+		    // We were showing a warning dialog to users who left a non-required field empty
+		    // because we can write empty values back to IMIS? (question mark because that's what I think it was doing).
+		    // We are removing this but I'm leaving the code pending further consideration.
+            // Kent 3/24/2017
+			//if(IsAnyPersonalFieldEmpty()){
+			//	ShowEmptyFieldsMessage()
+			//}
+			//else{
+				SubmitForm();
+			//}
+		}
+
+		function SetFormEmailSessionValue(value){
+			/*
+			$.ajax({
+				url: "/admin31/LandingPages/client/form_default_email_session_value.asp?operation=set",
+				type: "POST",
+				data: {'form_email': value}
+			});
+			*/
+		}
+
+		function GetFormEmailSessionValue(){
+			/*
+			$('#isf_subscriber_email').hide();
+			$.ajax({
+				url: "/admin31/LandingPages/client/form_default_email_session_value.asp?operation=get",
+				type: "POST",
+				success : function(email){
+					if (email != ""){
+						$('#isf_subscriber_email').parent().find('.required_icon').hide()
+						$('#isf_subscriber_email')[0].outerHTML += '<div style="position: initial;margin-top: 7px;display:inline-block;">'+ email +'</div>';
+						$('#isf_subscriber_email').val(email);
+					}
+					else{
+						$('#isf_subscriber_email').show();
+					}
+				}
+			});
+			*/
+		}
+
+		function SubmitForm() {
+			ShowWaitCursor();
+			var allParams = location.href.split('?')[1] ? ('?' + location.href.split('?')[1]) : '';
+			
+				var disableEmailParam = "e=1";
+				if(!allParams.includes(disableEmailParam)){
+					allParams += allParams ? ('&' + disableEmailParam) : ('?' + disableEmailParam);
+				}
+			
+
+			$.ajax({
+				url: FORM_SUBMIT_URL,
+				type: "POST",
+				data: $(".formData").serialize(),
+				error: function (xhr, ajaxOptions, thrownError) {
+					
+						window.location = "https://HBA.informz.net/HBA/pages/Footer_Newsletter_Thank_You_page"  + allParams;
+					
+				},
+
+				success: function(result) {
+					var resultJson = $.parseJSON(result);
+
+					
+						var responseMessage = 'The form was successfully submitted.',
+							showMessageBeforeRedirect = false,
+							registrationStatus = 0;
+						if (resultJson.WebinarRegistrationStatus) {
+							registrationStatus = resultJson.WebinarRegistrationStatus.RegistrationStatus;
+						}
+
+						var didWebinarRegistrationFail = registrationStatus > 1;
+						if (didWebinarRegistrationFail) {
+							responseMessage = resultJson.WebinarRegistrationStatus.RegistrationStatusUserMessage;
+							showMessageBeforeRedirect = true;
+						}
+
+						
+							if (showMessageBeforeRedirect) {
+								alert(responseMessage);
+							}
+							window.location = "https://HBA.informz.net/HBA/pages/Footer_Newsletter_Thank_You_page" + allParams;
+						
+				},
+    			complete: function(){
+    				HideWaitCursor();
+    				
+								var emailAddress = $('#isf_subscriber_email').val();
+							
+    						SetFormEmailSessionValue(emailAddress);
+    					
+				}
+			});
+        }
+
+		// To hide the error message and error container, this is defined as a callback function in the recaptcha
+		// element in landing_page_designer_object_captcha.js
+		function HideCaptchaError() {
+			ToggleCatpchaError(false)
+		}
+
+		function ToggleCatpchaError(showError) {
+			if(showError) {
+				$('#captchaError').show();
+				$('#captchaContainer').addClass('recaptcha-error');
+			} else {
+				$('#captchaError').hide();
+				$('#captchaContainer').removeClass('recaptcha-error');
+			}
+		}
+        // Not currently used. May be removed in the future.
+		function ShowEmptyFieldsMessage(){
+			$('#empty_fields_message').dialog({
+				modal: true,
+				title: '',
+				height: 170,
+				width: 460,
+				resizable: false,
+				buttons: [{
+					text : "Yes",
+					"class" : 'yes_button',
+					click : function () {
+						$( this ).dialog( "close" );
+						SubmitForm();
+					}
+				},
+				{
+					text : "No",
+					"class" : 'no_button',
+					click : function () {
+						$( this ).dialog( "close" );
+						event.preventDefault();
+					}
+				}]
+			});
+		}
+        function UnsubscribeFromForm(){
+            $.ajax({
+		        url: FORM_SUBMIT_URL,
+                type:"POST",
+		        data: {
+                    action: "unsub",
+                    isf_id: "0",
+					isf_form_id: "8637"
+                },
+		        error: function (xhr, ajaxOptions, thrownError) {
+                    alert("There was an error submitting the form.");
+                },
+		        success: function(result) {
+                    ShowUnsubscribeMessage();
+                }
+            });
+        }
+
+        function ShowUnsubscribeMessage() {
+            $("#body_content").css({"cursor":"default"});
+            $(".form_designer_button").css({"cursor":"default"});
+			ActivateEventsForSubmitButton();
+            $("#live").hide();
+            $("#live_mobile").hide();
+            $(".form_messages").html("You have been successfully unsubscribed.");
+            $(".form_messages").show();
+        }
+
+        function ShowUnsubscribeTestMessage() {
+            $("#body_content").css({"cursor":"default"});
+            $(".form_designer_button").css({"cursor":"default"});
+			ActivateEventsForSubmitButton();
+            $("#live").hide();
+            $("#live_mobile").hide();
+            $(".form_messages").html("You would have been unsubscribed, but this page is in test mode.");
+            $(".form_messages").show();
+        }
+
+        function ShowAuthUserUnsubscribeMessage() {
+            $("#body_content").css({"cursor":"default"});
+            $(".form_designer_button").css({"cursor":"default"});
+			ActivateEventsForSubmitButton();
+            $("#live").hide();
+            $("#live_mobile").hide();
+            $(".form_messages").html("This email address is associated with a user account. It cannot be unsubscribed until the user account has been removed.");
+            $(".form_messages").show();
+        }
+
+		function ShowWaitCursor() {
+			$("#body_content").css({"cursor":"wait"});
+			$(".form_designer_button").css({"cursor":"wait"});
+			
+				$("#submitButton_live").css({pointerEvents: "none"});
+			
+		}
+
+		function HideWaitCursor() {
+			$("#body_content").css({"cursor":"default"});
+			$(".form_designer_button").css({"cursor":"pointer"});
+			ActivateEventsForSubmitButton();
+		}
+
+		function ActivateEventsForSubmitButton() {
+			
+				$("#submitButton_live").css({pointerEvents: "auto"});
+			
+		}
+
+    </script>
+    <title>IZ Copy of Email Sign up for Footer</title>
+
+
+
+
+
+    <style>
+	/*#region jquery dialog classes*/
+	.message_box{
+		font-size: 15px !important;
+		overflow: hidden !important;
+		font-family: 'Fira Sans', sans-serif !important;
+		font-weight: 100 !important;
+		color: #515151 !important;
+		height: 50px !important;
+	}
+	.message_box > p{
+		padding-top: 11px;
+		padding-right: 30px;
+		padding-left: 20px;
+	}
+	.yes_button{
+		background : #7da42e !important;
+		color : #ffffff !important;
+		width: 80px !important;
+		font-family: sans-serif!important;
+		font-size:12px !important;
+		line-height:13px !important;
+		font-weight:300 !important;
+		text-decoration:none !important;
+		border: none !important;
+		border-radius: 0px !important;
+		height: 34px !important;
+	}
+	.no_button{
+		background : #515151 !important;
+		color : #ffffff !important;
+		width: 80px !important;
+		font-family: sans-serif!important;
+		font-size:12px !important;
+		line-height:13px !important;
+		font-weight:300 !important;
+		text-decoration:none !important;
+		border: none !important;
+		border-radius: 0px !important;
+		height: 34px !important;
+		margin-left: 10px !important;
+	}
+	.ui-dialog-buttonset{
+		float:left !important;
+		margin-left: 5px !important;
+	}
+	.ui-dialog-titlebar{
+		display: none;
+	}
+	.ui-dialog-buttonpane{
+		 border : none !important;
+		 padding-left: 30px !important;
+		 padding-bottom : 20px !important;
+	}
+	.ui-dialog{
+		border-style: solid !important;
+		border-width: 10px !important;
+		border-radius: 0px !important;
+		border-color: #dedede !important;
+		background: #ffffff !important;
+	}
+	/* #end */
+        
+    </style>
+
+
+
+    <div id="body_content">
+		
+
+	
+		<div id="landing_page_content" style="">
+			<form class="formData" autocomplete="off">
+				<!-- H o n e y p o t -->
+				<label class="ohnohoney" for="name"></label>
+				<input class="ohnohoney" autocomplete="off" type="search" id="name" name="name" placeholder="Your name here">
+				<label class="ohnohoney" for="email"></label>
+				<input class="ohnohoney" autocomplete="off" type="search" id="email" name="email" placeholder="Your e-mail here">
+				
+        <div class="form_messages" style="background-color:#ffffff;border-radius:4px;border:1px solid #999999;margin:40px;padding:5px;text-align: center;display:none"></div>
+        <div id="live" class="informzForm" style="display: block; position: relative; height: 307px; width: 544px; background-color: rgba(255, 255, 255, 0); border: 0px solid rgb(239, 239, 239); border-radius: 0px; margin: 10px auto; padding: 10px;">
+            <div id="sortableFormFramesLive"></div>
+            <div id="sortableFormImagesLive"></div>
+            <div id="sortableFormItemsLive"><div><div style="position: absolute; top: 10px; left: 15px; cursor: text; border-radius: 4px;" class="form_designer_field" id="email_live"><div id="inputemail" class="form_designer_text_input ui-resizable" style="width: 250px; border-width: 0px 8px 0px 0px; border-style: inset solid inset inset; border-color: transparent; border-image: initial; margin-top: 0px; margin-bottom: 0px; border-radius: 0px; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); padding: 4px; font-family: Roboto; font-weight: normal; font-size: 15px; line-height: 24px; letter-spacing: 0px; display: inline-block; height: auto;" data-no-fixed-height="true"> <input style="width: calc(100% - 0px); display: inline-block; border: 0px inset transparent; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); font-family: Roboto; font-weight: normal; font-size: 15px; line-height: 24px; letter-spacing: 0px; padding-top: 0px; padding-bottom: 0px; pointer-events: unset;" id="isf_subscriber_email" class="form_designer_text_input edit-element" title="Email" value="Enter email here" data-validation-engine="validate[required,custom[email]]" placeholder="Enter email here" name="isf_subscriber_email" autocomplete="off"></div><span class="required_icon" style="color: rgb(255, 0, 0);">*</span></div></div><div><div style="position: absolute; top: 50px; left: 15px; cursor: text; border-radius: 4px;" class="form_designer_field" id="submitButton_live"><div style="display: block; width: 100%; cursor: pointer;" id="container_submitButton"><div id="submitButton_button" style="width: 120px; height: 35px; word-break: break-all; display: table-cell; vertical-align: middle; color: rgb(255, 255, 255); font-family: Roboto; border: 2px solid rgb(249, 235, 59); border-radius: 0px; margin-top: 0px; margin-bottom: 0px; padding: 0px; background-color: rgba(250, 237, 58, 0); font-size: 16px; text-align: center; box-shadow: rgb(153, 153, 153) 2px 2px 2px; letter-spacing: 1px; line-height: 35px;" class="form_designer_button ui-resizable"><div id="editable_submitButton" class="form_designer_field_editable" spellcheck="true" data-medium-editor-element="true" role="textbox" aria-multiline="true" data-medium-editor-editor-index="1" medium-editor-index="eebbb203-2a77-ec4c-41b4-b45173884a5c" data-placeholder="Type your text"><div style=""></div><p style=""></p><p style=""><b>SUBSCRIBE</b></p><p style=""></p></div></div><input name="submitButton" type="hidden" value="0" placeholder="0" id="submitButton" style="pointer-events: unset;" autocomplete="off"><input name="submitButton" type="hidden" value="8637" placeholder="0" id="submitButton" style="pointer-events: unset;" autocomplete="off"></div></div></div></div>
+        </div>
+    
+			<input type="hidden" name="isf_form_id" value="8637"><input type="hidden" name="isf_id" value="0"></form>
+			
+			<script>
+				var inputs = Array.from(document.getElementsByTagName("input"));
+				inputs.forEach(input => input.autocomplete="off");
+				document.getElementById("email").type="search";
+				document.getElementById("name").type="search";
+			</script>
+		</div>
+	</div>
+
+	<!-- TRACKING WHEN USER STARTS FILLING FORM -->
+
+	<!-- The following script should execute after all landing page content is generated -->
+	<script type="text/javascript">
+
+		// A script to track the change of any form control inside the landing page. Sends a single HTTP request when user starts filling form.
+		(function ($, document, formId, subscriberId) {
+
+			$(document).ready(main);
+
+			function main() {
+				var landingPageContent = $("#landing_page_content");
+				var lpForms = $("form", landingPageContent); // added a context object as a second parameter to subquery inside landingPageContent
+
+				if (!lpForms) {
+					return console.info('Landing page contains no forms to track');
+				}
+
+				attachEvents();
+
+				var handlerExecuting = false; // a flag to allow only one HTTP request at time
+				var retryAttempts = 3;
+
+				function handleFormChanged() {
+
+					if (handlerExecuting) {
+						return;
+					}
+
+					handlerExecuting = true;
+					$.ajax({
+						url: "../form_started_process.asp",
+						method: "POST",
+						type: "POST", // defining post method twice to support different jQuery versions
+						data: {
+							formId: formId,
+							subscriberId: subscriberId
+						},
+						success: function () {
+							detachEvents();
+						},
+						error: function () {
+							retryAttempts -= 1;
+
+							if (retryAttempts > 0) {
+								handlerExecuting = false; // this way the request may be retried when user does more changes
+							}
+						}
+					});
+				}
+
+				function attachEvents() {
+					$("input", lpForms).on("keypress touchend change", handleFormChanged);
+					$("select", lpForms).on("change", handleFormChanged);
+				}
+
+				function detachEvents() {
+					$("input", lpForms).unbind("keypress touchend change", handleFormChanged);
+					$("select", lpForms).unbind("change", handleFormChanged);
+				}
+			}
+		})($, document, 8637 , 0);
+	</script>
+
+	<!-- END TRACKING WHEN USER STARTS FILLING FORM -->
+
+
+
+</body></html>
